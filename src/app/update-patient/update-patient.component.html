@@ -1,38 +1,40 @@
-<div class="container p-5 w-50">
-    <h2>Update Data</h2>
-     <!-- Form -->
-     <form>
-        <div class="form-group mb-2">
-          <label for="exampleInputEmail1">Name</label>
-          <input type="text" class="form-control" [(ngModel)]="patient.name" name="name"   placeholder="Enter Name">
-        </div>
-        <div class="form-group mb-2">
-          <label for="exampleInputEmail1">Email</label>
-          <input type="email" class="form-control" [(ngModel)]="patient.email" name="email"   placeholder="Enter Email">
-        </div>
-        <div class="form-group mb-2">
-          <label for="exampleInputEmail1">City</label>
-          <input type="email" class="form-control" [(ngModel)]="patient.city" name="city"   placeholder="Enter City">
-        </div>
-        <div class="form-group mb-2">
-          <label for="exampleInputEmail1">Pincode</label>
-          <input type="email" class="form-control" [(ngModel)]="patient.pincode" name="pincode"   placeholder="Enter pincode">
-        </div>
-        <div class="form-group mb-2">
-          <label for="exampleInputEmail1">Phone Number</label>
-          <input type="email" class="form-control" [(ngModel)]="patient.phonenumber" name="phonenumber"   placeholder="Enter Number">
-        </div>
+<div class="container">
+<div class="centered">
+  <h2>Update Data</h2>
+  <!-- Form -->
+  <form>
+     <div class="form-group mb-2">
+       <label for="exampleInputEmail1">Patient ID</label>
+       <input type="text" class="form-control" [(ngModel)]="patient.patientID" name="patientID"   placeholder="Enter Patient ID">
+     </div>
+     <div class="form-group mb-2">
+       <label for="exampleInputEmail1">Name</label>
+       <input type="email" class="form-control" [(ngModel)]="patient.name" name="email"   placeholder="Enter Email">
+     </div>
+     <div class="form-group mb-2">
+       <label for="exampleInputEmail1">Patient Ward</label>
+       <input type="email" class="form-control" [(ngModel)]="patient.patientWard" name="patientWard"   placeholder="Enter Ward">
+     </div>
+     <div class="form-group mb-2">
+       <label for="exampleInputEmail1">Description</label>
+       <input type="email" class="form-control" [(ngModel)]="patient.description" name="description"   placeholder="Enter pincode">
+     </div>
+     <div class="form-group mb-2">
+       <label for="exampleInputEmail1">Phone Number</label>
+       <input type="email" class="form-control" [(ngModel)]="patient.phonenumber" name="phonenumber"   placeholder="Enter Number">
+     </div>
 
-      </form>
+   </form>
 <div class="row d-flex">
-    
-    <div class="buttons mt-5">
-        <button routerLink="/parent-screen" class="btn btn-Secondary mr-5">Back</button>
-      <button (click)="update()" class="btn btn-primary">Update</button>
-    </div>
+ 
+ <div class="buttons mt-5">
+     <button routerLink="/parent-screen" class="btn btn-Secondary mr-5">Back</button>
+   <button (click)="update()" class="btn btn-primary">Update</button>
+ </div>
 </div>
-    <!-- -------------------------------Form ---- -->
+ <!-- -------------------------------Form ---- -->
+</div>
 </div>
 
-<pre>{{patient|json}}</pre>
+
 

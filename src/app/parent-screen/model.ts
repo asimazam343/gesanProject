@@ -1,8 +1,14 @@
 export interface datamodel{
     id:number;
+    patientID:string;
     name:string;
-    email:string;
-    city:string;
+    patientWard:string;
     phonenumber:number;
-    pincode:number;
+    description:string;
+    // id:number;
+    // name:string;
+    // email:string;
+    // city:string;
+    // phonenumber:number;
+    // pincode:number;
 }

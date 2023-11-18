@@ -19,10 +19,10 @@ export class ParentScreenComponent implements OnInit {
 
   ngOnInit():void{
   this.patientForm = this.formbuilder.group({
+  patientID:['',Validators.required],
   name:['',Validators.required],
-  email:['',Validators.required],
   city:['',Validators.required],
-  pincode:['',Validators.required],
+  description:['',Validators.required],
   phonenumber:['',Validators.required],
 })
 
@@ -42,4 +42,15 @@ this.getPatient();
       this.data = res;
     })
   }
+
+  // deleterecord(id: number):void{
+  //   this.api.deletePatient(id).subscribe(()=>{
+
+  //   })
+  //   const index = this.patientForm.findIndex(item => item.id === id);
+
+  //   if(index !== -1){
+  //     this.data?.splice(index, 1)
+  //   }
+  // }
 }

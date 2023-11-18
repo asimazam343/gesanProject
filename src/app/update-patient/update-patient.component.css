@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    /* background-color: DD2E37; */
+  }
+  
+  .centered {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 700px;
+  border-radius: 8px; 
+  background-color: #fff; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease; 
+  }
+
+  .centered:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+  }
+  

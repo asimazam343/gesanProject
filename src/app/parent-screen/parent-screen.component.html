@@ -1,37 +1,40 @@
-<h2 class="text-center mt-5">Gesan Patient Record</h2>
-<div class="table d-flex container-fluid">
-    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Record</button>
+<header class=" mt-5  mb-5 d-flex justify-content-center align-items-center">
+  <img src="../../assets/logo.png" alt="logo" >
+  <!-- <h2 class="text-center mt-5">Gesan Patient Record</h2> -->
+</header>
+
+<div class="table d-flex justify-content-end container">
+
+    <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Record</button>
 </div>
 
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div  class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="exampleModalLabel">Add Patient Record</h5>
+       
         </div>
         <div class="modal-body">
             <!-- Form -->
             <form [formGroup]="patientForm">
                 <div class="form-group mb-2">
+                  <label for="exampleInputEmail1">Patient ID</label>
+                  <input type="text" class="form-control" formControlName="patientID"  placeholder="Enter Patient ID">
+                </div>
+                <div class="form-group mb-2">
                   <label for="exampleInputEmail1">Name</label>
-                  <input type="text" class="form-control" formControlName="name"  placeholder="Enter Name">
+                  <input type="email" class="form-control" formControlName="name"  placeholder="Enter Name">
                 </div>
                 <div class="form-group mb-2">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" formControlName="email"  placeholder="Enter Email">
+                  <label for="exampleInputEmail1">Patient Ward</label>
+                  <input type="email" class="form-control" formControlName="patientWard"  placeholder="Enter Ward">
                 </div>
                 <div class="form-group mb-2">
-                  <label for="exampleInputEmail1">City</label>
-                  <input type="email" class="form-control" formControlName="city"  placeholder="Enter City">
-                </div>
-                <div class="form-group mb-2">
-                  <label for="exampleInputEmail1">Pincode</label>
-                  <input type="email" class="form-control" formControlName="pincode"  placeholder="Enter pincode">
+                  <label for="exampleInputEmail1">Description</label>
+                  <input type="email" class="form-control" formControlName="description"  placeholder="Enter Description">
                 </div>
                 <div class="form-group mb-2">
                   <label for="exampleInputEmail1">Phone Number</label>
@@ -40,7 +43,7 @@
 
               </form>
             <!-- -------------------------------Form ---- -->
-          ...
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -57,10 +60,10 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
+            <th scope="col">Patient ID</th>
             <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">City</th>
-            <th scope="col">Pincode</th>
+            <th scope="col">Patient Ward</th>
+            <th scope="col">Description</th>
             <th scope="col">Phone Number</th>
             <th scope="col">Action</th>
           </tr>
@@ -68,16 +71,18 @@
         <tbody>
           <tr *ngFor="let item of data">
             <td>{{item.id}}</td>
+            <td>{{item.patientID}}</td>
             <td>{{item.name}}</td>
-            <td>{{item.email}}</td>
-            <td>{{item.city}}</td>
-            <td>{{item.pincode}}</td>
+            <td>{{item.patientWard}}</td>
+            <td>{{item.description}}</td>
             <td>{{item.phonenumber}}</td>
             <td>
-                <button routerLink="/update-patient/id={{item.id}}" class="btn btn-warning me-3">Edit</button>
-                <button class="btn btn-danger">Delete</button>
+                <button routerLink="/update-patient/{{item.id}}" class="btn me-3">Edit</button>
+                <button class="btn">Delete</button>
             </td>
           </tr>
         </tbody>
       </table>
   </div>
+
+  
