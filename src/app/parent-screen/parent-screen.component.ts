@@ -43,14 +43,17 @@ this.getPatient();
     })
   }
 
-  // deleterecord(id: number):void{
-  //   this.api.deletePatient(id).subscribe(()=>{
+  deleterecord(id: number):void{
+    this.api.deletePatient(id).subscribe(()=>{
+    })
 
-  //   })
-  //   const index = this.patientForm.findIndex(item => item.id === id);
+    this.getPatient();
 
-  //   if(index !== -1){
-  //     this.data?.splice(index, 1)
-  //   }
-  // }
+    
+    // const index = this.getPatient.findIndex(item => item.id === id);
+
+    // if(index !== -1){
+    //   this.data?.splice(index, 1)
+    // }
+  }
 }

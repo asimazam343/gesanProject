@@ -26,19 +26,19 @@
                 </div>
                 <div class="form-group mb-2">
                   <label for="exampleInputEmail1">Name</label>
-                  <input type="email" class="form-control" formControlName="name"  placeholder="Enter Name">
+                  <input type="text" class="form-control" formControlName="name"  placeholder="Enter Name">
                 </div>
                 <div class="form-group mb-2">
                   <label for="exampleInputEmail1">Patient Ward</label>
-                  <input type="email" class="form-control" formControlName="patientWard"  placeholder="Enter Ward">
+                  <input type="text" class="form-control" formControlName="patientWard"  placeholder="Enter Ward">
                 </div>
                 <div class="form-group mb-2">
                   <label for="exampleInputEmail1">Description</label>
-                  <input type="email" class="form-control" formControlName="description"  placeholder="Enter Description">
+                  <input type="text" class="form-control" formControlName="description"  placeholder="Enter Description">
                 </div>
                 <div class="form-group mb-2">
                   <label for="exampleInputEmail1">Phone Number</label>
-                  <input type="email" class="form-control" formControlName="phonenumber"  placeholder="Enter Number">
+                  <input type="text" class="form-control" formControlName="phonenumber"  placeholder="Enter Number">
                 </div>
 
               </form>
@@ -47,7 +47,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button (click)="addPatient(this.patientForm.value)" type="button" class="btn btn-primary">Add</button>
+          <button (click)="addPatient(this.patientForm.value)"  type="button" class="btn btn-primary">Add</button>
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@
             <td>{{item.phonenumber}}</td>
             <td>
                 <button routerLink="/update-patient/{{item.id}}" class="btn me-3">Edit</button>
-                <button class="btn">Delete</button>
+                <button (click)="deleterecord(item.id)" class="btn">Delete</button>
             </td>
           </tr>
         </tbody>
